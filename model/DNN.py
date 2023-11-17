@@ -19,7 +19,7 @@ class MLP(nn.Module):
             out = layer(out)
 
         out = self.linear(out)
-        prob = F.softmax(out)
+        prob = F.softmax(out, dim=-1)
         
         return prob
 
